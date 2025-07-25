@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Callback</title></head>
+<body>
+  <script type="module">
+    import { UserManager } from "https://cdn.jsdelivr.net/npm/oidc-client-ts/+esm";
+    import { oidcConfig } from "./oidc-config.js";
+    const userManager = new UserManager(oidcConfig);
+    userManager.signinRedirectCallback().then(() => {
+      window.location.href = "./index.html";
+    }).catch(e => {
+      console.error("Callback error", e);
+    });
+  </script>
+</body>
