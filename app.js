@@ -1,6 +1,8 @@
 import { UserManager } from "https://cdn.jsdelivr.net/npm/oidc-client-ts/+esm";
 import { oidcConfig } from "./oidc-config.js";
 
+console.log("oidcConfig:", oidcConfig); 
+
 const mgr = new UserManager(oidcConfig);
 
 document.getElementById("login").addEventListener("click", () => {
