@@ -5,11 +5,15 @@
   <script type="module">
     import { UserManager } from "https://cdn.jsdelivr.net/npm/oidc-client-ts/+esm";
     import { oidcConfig } from "./oidc-config.js";
-    const userManager = new UserManager(oidcConfig);
-    userManager.signinRedirectCallback().then(() => {
+
+    const mgr = new UserManager(oidcConfig);
+
+    mgr.signinRedirectCallback().then(() => {
       window.location.href = "./index.html";
     }).catch(e => {
       console.error("Callback error", e);
+      document.body.innerHTML = `<pre>${e}</pre>`;
     });
   </script>
 </body>
+</html>
