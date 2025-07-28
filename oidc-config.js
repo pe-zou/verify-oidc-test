@@ -6,7 +6,6 @@ export const oidcConfig = {
   scope: "openid profile email",
   authority: "https://ciam-ndi.verify.ibm.com/oauth2", 
   metadata: {
-    issuer: "https://ciam-ndi.verify.ibm.com/oauth2",
     authorization_endpoint: "https://ciam-ndi.verify.ibm.com/oauth2/authorize",
     token_endpoint: "https://ciam-ndi.verify.ibm.com/oauth2/token",
     userinfo_endpoint: "https://ciam-ndi.verify.ibm.com/oauth2/userinfo",
