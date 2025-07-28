@@ -4,7 +4,8 @@ import { oidcConfig } from "./oidc-config.js";
 const mgr = new UserManager(oidcConfig);
 
 document.getElementById("login").addEventListener("click", () => {
-  mgr.signinRedirect();
+  console.log("Login button clicked");
+  mgr.signinRedirect().catch(e => console.error("Login error", e));
 });
 
 document.getElementById("logout").addEventListener("click", () => {
