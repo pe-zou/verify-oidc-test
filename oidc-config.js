@@ -4,6 +4,7 @@ export const oidcConfig = {
   post_logout_redirect_uri: "https://pe-zou.github.io/verify-oidc-sample/index.html",
   response_type: "code",
   scope: "openid profile email",
+  authority: null,
   metadata: {
     issuer: "https://ciam-ndi.verify.ibm.com/oauth2",
     authorization_endpoint: "https://ciam-ndi.verify.ibm.com/oauth2/authorize",
